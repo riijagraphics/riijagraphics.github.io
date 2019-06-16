@@ -45,6 +45,7 @@ a {
     justify-content: center;
     flex-direction: column;
     transition: box-shadow 0.8s;
+    user-select: none;
 }
 
 .main-wrapper .container:hover {
@@ -54,7 +55,6 @@ a {
 
 .main-wrapper .container img {
     display: block;
-    user-select: none;
 }
 
 .main-wrapper .container .div-title {
@@ -64,5 +64,4 @@ a {
 .main-wrapper .container .title {
     font-family: "Roboto Slab",sans-serif;
     margin: auto;
-    user-select: none;
 }
