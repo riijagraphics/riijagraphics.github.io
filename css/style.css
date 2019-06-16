@@ -1,10 +1,11 @@
-html,body{
-  height:100%;
-  overflow:hidden;
+html,
+body {
+    height: 100%;
+    overflow: hidden;
 }
 
-body{
-  background-size:cover;
+body {
+    background-size: cover;
 }
 
 a {
@@ -12,34 +13,37 @@ a {
     text-decoration: none;
 }
 
-.main-wrapper{
+.main-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-.box{
-	position: relative;
-    width: 25%;		/* desired width */
+.box {
+    position: relative;
+    width: 25%;
+    /* desired width */
     min-width: 250px;
 }
-.box:before{
-	content: "";
-	display: block;
-	padding-top: 100%; 	/* initial ratio of 1:1*/
+
+.box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/
 }
 
 .main-wrapper .container {
-    position:  absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     right: 0;
-    
+
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +54,7 @@ a {
 
 .main-wrapper .container:hover {
     cursor: pointer;
-    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
 }
 
 .main-wrapper .container img {
@@ -62,6 +66,6 @@ a {
 }
 
 .main-wrapper .container .title {
-    font-family: "Roboto Slab",sans-serif;
+    font-family: "Roboto Slab", sans-serif;
     margin: auto;
 }
