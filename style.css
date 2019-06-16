@@ -21,7 +21,7 @@ a {
 
 .box{
 	position: relative;
-    width: 20%;		/* desired width */
+    width: 30%;		/* desired width */
     min-width: 250px;
 }
 .box:before{
