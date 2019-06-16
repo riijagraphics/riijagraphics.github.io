@@ -43,13 +43,14 @@ $('.container, .title a').on('click', function (e) {
     randomizeBackground();
 });
 
-$('.title a').on('mouseenter', function (e) {
-    $(e.currentTarget).addClass('hovered');
+$('.container').on('mouseenter', function (e) {
+    var target = $(e.currentTarget).find('.title a');
+    target.addClass('hovered');
     function move() {
         
-        if ($(e.currentTarget).hasClass('hovered')) {
-            var $chars = $(e.currentTarget).find('.char');
-            $(e.currentTarget).prepend($chars.eq(getRandomArbitary(0, $chars.length)));
+        if (target.hasClass('hovered')) {
+            var $chars = target.find('.char');
+            target.prepend($chars.eq(getRandomArbitary(0, $chars.length)));
             setTimeout(function () {
                 move();
             }, 50);
@@ -59,10 +60,11 @@ $('.title a').on('mouseenter', function (e) {
     move();
 });
 
-  $('.title a').on('mouseleave', function (e) {
-    $(e.currentTarget).removeClass('hovered');
-      var text = $(this).data('text'),
-          $chars = $(e.currentTarget).find('.char');
+  $('.container').on('mouseleave', function (e) {
+    var target = $(e.currentTarget).find('.title a');
+    target.removeClass('hovered');
+      var text = target.data('text'),
+          $chars = target.find('.char');
     
     var ind = 0;
             function setChar() { 
