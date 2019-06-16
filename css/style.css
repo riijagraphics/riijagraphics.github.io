@@ -63,4 +63,5 @@ a {
 .main-wrapper .container .title {
     font-family: "Roboto Slab",sans-serif;
     margin: auto;
+    user-select: none;
 }
