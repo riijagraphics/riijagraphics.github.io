@@ -17,7 +17,7 @@ function createChars(el, duration, minDuration) {
     var str = $(el).text().trim();
     $(el).html('');
     for (var i in str) {
-        var $char = $(document.createElement('span'))
+        var $char = $(document.createElement('span'));
         $char.addClass('char');
         $char.text(str[i]);
         $(el).append($char);
@@ -73,4 +73,4 @@ $('.container').on('mouseleave', function (e) {
         setChar();
     }, 100);
 
-})
+});
