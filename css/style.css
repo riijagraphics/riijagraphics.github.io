@@ -54,6 +54,7 @@ a {
 
 .main-wrapper .container img {
     display: block;
+    user-select: none;
 }
 
 .main-wrapper .container .div-title {
