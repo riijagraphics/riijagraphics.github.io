@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
     overflow: hidden;
+    font-family: "Roboto Slab", sans-serif;
 }
 
 body {
@@ -50,6 +51,17 @@ a {
     flex-direction: column;
     transition: box-shadow 0.8s;
     user-select: none;
+    text-align: center;
+
+    min-height: 350px;
+    min-width: 350px;
+}
+
+#address {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
 }
 
 .main-wrapper .container:hover {
@@ -66,7 +78,27 @@ a {
 }
 
 .main-wrapper .container .title {
-    font-family: "Roboto Slab", sans-serif;
     margin: auto;
     text-align: center;
+}
+
+a.button#email {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    min-width: 100px;
+}
+
+a.button {
+    text-align: center;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 8px;
+    transition: background-color, 0.3s;
+}
+
+a.button:hover {
+    background-color: black;
+    color: white;
 }
