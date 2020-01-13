@@ -38,45 +38,45 @@ $('.container, .title a').on('click', function(e) {
   randomizeBackground();
 });
 
-$('.container').on('mouseenter', function(e) {
-  var target = $(e.currentTarget).find('.title a');
-  target.addClass('hovered');
+// $('.container').on('mouseenter', function(e) {
+//   var target = $(e.currentTarget).find('.title a');
+//   target.addClass('hovered');
 
-  function move() {
-    if (target.hasClass('hovered')) {
-      var $chars = target.find('.char');
-      target.prepend($chars.eq(getRandomArbitary(0, $chars.length)));
-      setTimeout(function() {
-        move();
-      }, 50);
-    }
-  }
+//   function move() {
+//     if (target.hasClass('hovered')) {
+//       var $chars = target.find('.char');
+//       target.prepend($chars.eq(getRandomArbitary(0, $chars.length)));
+//       setTimeout(function() {
+//         move();
+//       }, 50);
+//     }
+//   }
 
-  move();
-});
+//   move();
+// });
 
-$('.container').on('mouseleave', function(e) {
-  var target = $(e.currentTarget).find('.title a');
-  target.removeClass('hovered');
-  var text = target.data('text'),
-    $chars = target.find('.char');
+// $('.container').on('mouseleave', function(e) {
+//   var target = $(e.currentTarget).find('.title a');
+//   target.removeClass('hovered');
+//   var text = target.data('text'),
+//     $chars = target.find('.char');
 
-  var ind = 0;
+//   var ind = 0;
 
-  function setChar() {
-    $chars.eq(ind).text(text[ind]);
-    ind++;
-    if (ind < text.length) {
-      setTimeout(function() {
-        setChar();
-      }, 50);
-    }
-  }
+//   function setChar() {
+//     $chars.eq(ind).text(text[ind]);
+//     ind++;
+//     if (ind < text.length) {
+//       setTimeout(function() {
+//         setChar();
+//       }, 50);
+//     }
+//   }
 
-  setTimeout(function() {
-    setChar();
-  }, 100);
-});
+//   setTimeout(function() {
+//     setChar();
+//   }, 100);
+// });
 
 function decode(a) {
   return a.replace(/[a-zA-Z]/g, function(c) {
